@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Zależności: sox wmctrl zenity
+
 texts[0]="Błąd krytyczny"
 texts[1]="Twój komputer to złom"
 texts[2]="***** ***"
