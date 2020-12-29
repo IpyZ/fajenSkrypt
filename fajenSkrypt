@@ -15,7 +15,7 @@ echo ${#texts[*]}
 
 sleep 5s
 
-play ~/Muzyka/hehe.mp3 -q &
+play ./hehe.mp3 -q &
 
 sleep 1.7s
 
