@@ -1,0 +1,27 @@
+#!/bin/bash
+
+texts[0]="Błąd krytyczny"
+texts[1]="Twój komputer to złom"
+texts[2]="***** ***"
+texts[3]="O k*rwa"
+texts[4]="Never gonna give u up"
+texts[5]="Tak XD"
+texts[6]="Jesteś adoptowany"
+texts[7]="I like ur cut g"
+texts[8]="XD"
+texts[9]="iPhone is trash"
+texts[10]="Oh no! Anyway"
+echo ${#texts[*]}
+
+sleep 5s
+
+play ~/Muzyka/hehe.mp3 -q &
+
+sleep 1.7s
+
+for i in {0..132..1} 
+do
+sleep .3s
+zenity --error --text "${texts[$((0 + $RANDOM % 10))]}" &
+[ $i -ge 1 ] && wmctrl -r :ACTIVE: -e 0,$((0 + $RANDOM % 1920)),$((0 + $RANDOM % 1080)),100,100 &
+done
